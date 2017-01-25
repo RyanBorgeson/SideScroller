@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<!--common engine code-->
+<script src="gameLoop.js"></script>
+<script src="physics.js"></script>
+<script src="states.js"></script>
+<script src="controls.js"></script>
+<script src="image.js"></script>
+<script src="sound.js"></script>
+<script src="preload.js"></script>
+<script src="button.js"></script>
+<script src="camera.js"></script>
+<!--add your additional scripts here-->
+<script src="levels.js"></script>
+<script src="spikes.js"></script>
+<script src="hud.js"></script>
+<script src="player.js"></script>
+<script src="coin.js"></script>
+<script src="monster.js"></script>
+<script src="goal.js"></script>
+<script src="wall.js"></script>
+<title>PGS Platformer, v1.0.2</title>
+</head>
+<body>
+<canvas id="canvas" style="background:black" tabindex="1"/>
+<script language="Javascript">
+//use these constants to adjust the size of the application window
+const appWidth = 640; //horizontal width in pixels
+const appHeight = 480; //vertical width in pixels
+
+var theCanvas = document.getElementById("canvas"); //a reference to the canvas element itself
+var context = theCanvas.getContext("2d"); //the 2D drawing context of the canvas
+
+//resize the canvas to the application size
+theCanvas.width = appWidth;
+theCanvas.height = appHeight;
+
+window.addEventListener("load", startCanvasApp);
+//startup function
+function startCanvasApp(){
+	console.log("Game started");
+	
+	registerControls();
+	switchGameState("Preload");
+	requestAnimationFrame(runGame);
+}
+</script>
+</body>
+</html>
