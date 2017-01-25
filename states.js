@@ -4,7 +4,7 @@
 gameStates["Title"] = {
 	init: function() {
 		levelNum = 0;
-		button = new Button("Start game", 200,400, 200,50, 
+		button = new Button("Start Game", innerWidth / 2 - 100,400, 200,50, 
 			function() {
 				switchGameState("Game");
 			}, KEY_SPACE
@@ -15,8 +15,8 @@ gameStates["Title"] = {
 	},
 	render: function() {
 		
-		context.drawImage(assets["logo"],
-			(appWidth-assets["logo"].width)/2,
+		context.drawImage(assets["ProjectTestRun"],
+			(appWidth-assets["ProjectTestRun"].width)/2,
 			75);
 		
 		button.render();

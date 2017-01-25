@@ -18,6 +18,7 @@ Button.prototype.update = function(deltaTime) {
 }
 
 Button.prototype.render = function() {
+	
 	if(this.pressed)
 		context.fillStyle = "black";
 	else

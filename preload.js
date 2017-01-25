@@ -14,7 +14,8 @@ gameStates["Preload"] = {
 			"spikes": loadImage("spikes.png"),
 			"coin": loadImage("coin.png",1,4),
 			"pickup": loadSound("coin.ogg"),
-			"wall": loadImage("wall.png")
+			"wall": loadImage("wall.png"),
+			"ProjectTestRun": loadImage("Assets/project_test_run.png")
 		};
 		loadRemaining = Object.keys(assets).length;
 	},

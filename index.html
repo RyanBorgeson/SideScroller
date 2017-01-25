@@ -1,5 +1,20 @@
 <html>
 <head>
+
+<style type="text/css">
+
+	body {
+		background: #000;
+		margin: 10% auto;
+	}
+	
+	#canvas {
+		box-shadow: 0 0 100px #666;
+	}
+	
+</style>
+
+
 <meta charset="UTF-8">
 <!--common engine code-->
 <script src="gameLoop.js"></script>
@@ -23,11 +38,11 @@
 <title>PGS Platformer, v1.0.2</title>
 </head>
 <body>
-<canvas id="canvas" style="background:black" tabindex="1"/>
+<canvas id="canvas" style="background: url(background.png)" tabindex="1"/>
 <script language="Javascript">
 //use these constants to adjust the size of the application window
-const appWidth = 640; //horizontal width in pixels
-const appHeight = 480; //vertical width in pixels
+const appWidth = window.innerWidth; //horizontal width in pixels
+const appHeight = 500; //vertical width in pixels
 
 var theCanvas = document.getElementById("canvas"); //a reference to the canvas element itself
 var context = theCanvas.getContext("2d"); //the 2D drawing context of the canvas
